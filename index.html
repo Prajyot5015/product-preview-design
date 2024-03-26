@@ -20,7 +20,7 @@
         .images-container{
             display: flex;
             justify-content: center;
-
+            flex-wrap: wrap;
         }
         .product-image{
             width: 80px;
@@ -29,20 +29,52 @@
             margin: 5px;
             border-radius: 10px;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            
+            cursor: pointer;            
         }
     </style>
 </head>
 <body>
-    <img src="./img/1.jpg" alt="image not found" id="product-main-image" />
+    <img src="./img/1.jpg" alt="image not found" id="product-main-image"  />
     <div class="images-container">
-        <img src="./img/1.jpg" alt="image not found" class="product-image"/>
-        <img src="./img/2.jpg" alt="image not found" class="product-image"/>
-        <img src="./img/3.jpg" alt="image not found" class="product-image"/>
-        <img src="./img/4.jpg" alt="image not found" class="product-image"/>
-        <img src="./img/5.jpg" alt="image not found" class="product-image"/>
-        <img src="./img/6.jpg" alt="image not found" class="product-image"/>
+        <img src="./img/1.jpg" alt="image not found" class="product-image" onclick="change('1')" />
+        <img src="./img/2.jpg" alt="image not found" class="product-image" onclick="change('2')" />
+        <img src="./img/3.jpg" alt="image not found" class="product-image" onclick="change('3')" />
+        <img src="./img/4.jpg" alt="image not found" class="product-image" onclick="change('4')" />
+        <img src="./img/5.jpg" alt="image not found" class="product-image" onclick="change('5')" />
+        <img src="./img/6.jpg" alt="image not found" class="product-image" onclick="change('6')" />
     </div>
+
+    <script>
+        function change(path)
+        {
+            imgElement = document.getElementById('product-main-image');
+            
+            if(path==1)
+            {
+                imgElement.src = "./img/1.jpg";
+            }
+            else if(path==2)
+            {
+                imgElement.src = "./img/2.jpg";
+            }
+            else if(path==3)
+            {
+                imgElement.src = "./img/3.jpg";
+            }
+            else if(path==4)
+            {
+                imgElement.src = "./img/4.jpg";
+            }
+            else if(path==5)
+            {
+                imgElement.src = "./img/5.jpg";
+            }
+            else if(path==6)
+            {
+                imgElement.src = "./img/6.jpg";
+            }
+        }
+
+    </script>
 </body>
 </html>
